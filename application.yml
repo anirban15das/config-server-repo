@@ -17,5 +17,22 @@ logging:
   org.springframework.web: INFO
   com.spring.micro: INFO
   org.hibernate: INFO
+
+spring:  
+ datasource:
+  url: jdbc:mysql://localhost:3306/ekart_db_micro
+  username: root
+  password: admin
+  tomcat:
+   max-wait: 20000
+   max-active: 50
+   max-idle: 20
+   min-idle: 15
+  validation-query: SELECT 1
+ jpa:
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect   
+    ddl-auto: update  
   
   
